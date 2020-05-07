@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class poll(models.Model):
+class Poll(models.Model):
     title = models.CharField('投票主題', max_length=100)
     desc = models.TextField('說明', max_length=512)
     created = models.DateField('建立時間', auto_now_add=True)
