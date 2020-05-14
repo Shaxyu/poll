@@ -7,13 +7,12 @@
 </head>
 <body>
     <a href="/poll/">投票主題列表</a>
-    <h1>{{ poll.subject }}</h1>
+    <h1>{{ poll.title }}</h1>
     <p>{{ poll.desc|linebreaks }}</p>
-
     <ul>
         {% for option in option_list %}
         <li>
-            {{ option.title }} : {{ option.count }} 票
+            <a href="/option/{{option.id}}/">{{ option.title }}</a> : {{ option.count }} 
         </li>
         {% endfor %}
     </ul>
